@@ -298,7 +298,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="如果你看到这行字说明 hitokoto 挂了，请等待修复"></span>
+            <span id="subtitle" data-typed-text="如果你看到这行字说明一言 API 挂了，请等待修复"></span>
           
         </div>
 
@@ -543,13 +543,13 @@
       
         jQuery.ajax({
           type: 'GET',
-          url: 'https://v1.hitokoto.cn/',
+          url: 'https://hitokotoproxy.sigmadcy.deno.net/',
           headers: {},
           dataType: 'json',
           success: function(result) {
             var apiText;
             if (result) {
-              var keys = 'hitokoto,from_who'.split(',');
+              var keys = 'hitokoto'.split(',');
               if (result instanceof Array) {
                 result = result[0];
               }
@@ -567,7 +567,7 @@
           },
           error: function(xhr, status, error) {
             if (error) {
-              console.error('Failed to request https://v1.hitokoto.cn/:', error);
+              console.error('Failed to request https://hitokotoproxy.sigmadcy.deno.net/:', error);
             }
             typing(text);
           }
