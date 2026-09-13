@@ -93,7 +93,7 @@
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
-      <strong>DCY&#39;s Blog</strong>
+      <strong>SigmaDCY&#39;s Blog</strong>
     </a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
@@ -583,7 +583,7 @@
       
         jQuery.ajax({
           type: 'GET',
-          url: 'https://hitokotoproxy.sigmadcy.deno.net/',
+          url: 'https://hitokoto.sigmadcy.cc.cd',
           headers: {},
           dataType: 'json',
           success: function(result) {
@@ -607,7 +607,7 @@
           },
           error: function(xhr, status, error) {
             if (error) {
-              console.error('Failed to request https://hitokotoproxy.sigmadcy.deno.net/:', error);
+              console.error('Failed to request https://hitokoto.sigmadcy.cc.cd:', error);
             }
             typing(text);
           }
